@@ -6,7 +6,6 @@ export const registerUser = async (req: Request, res: Response) => {
   try {
     const { username, email, password } = req.body;
 
-    // Lógica para verificar si el usuario ya existe
     const userRepository = getRepository(User);
     const existingUser = await userRepository.findOne({ where: { email } });
 
@@ -14,7 +13,6 @@ export const registerUser = async (req: Request, res: Response) => {
       return res.status(400).json({ error: 'El usuario ya existe' });
     }
 
-    // Aquí puedes realizar más validaciones antes de crear el usuario
 
     const newUser = userRepository.create({ username, email, password });
     await userRepository.save(newUser);
@@ -36,9 +34,6 @@ export const loginUser = async (req: Request, res: Response) => {
     if (!user) {
       return res.status(401).json({ error: 'Credenciales inválidas' });
     }
-
-    // Enviar información adicional si es necesario
-    // Por ejemplo, un token de sesión
 
     return res.status(200).json({ message: 'Inicio de sesión exitoso', user });
   } catch (error) {

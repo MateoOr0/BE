@@ -9,7 +9,7 @@ const port = 8080;
 app.use(cors());
 app.use(express.json());
 
-app.use('/api', router); // Asegúrate de usar el prefijo /api
+app.use('/api', router); 
 
 dbConnection.then(() => {
   app.listen(port, () => {

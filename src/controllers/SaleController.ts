@@ -13,4 +13,3 @@ export const makeSale = async (req: Request, res: Response): Promise<void> => {
   }
 };
 
-// Agrega más funciones según sea necesario...

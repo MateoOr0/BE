@@ -14,5 +14,4 @@ export class User {
   @Column()
   password!: string;
 
-  // Agrega más campos según sea necesario...
 }

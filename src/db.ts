@@ -21,5 +21,5 @@ export const connectToDatabase = async (): Promise<void> => {
   }
 };
 
-// Exporta la conexión para que pueda ser utilizada en otros lugares
+
 export const dbConnection = connectToDatabase();

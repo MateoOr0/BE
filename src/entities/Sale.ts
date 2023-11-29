@@ -16,5 +16,4 @@ export class Sale {
   @Column('datetime')
   saleDate!: Date;
 
-  // Agrega más campos según sea necesario...
 }
